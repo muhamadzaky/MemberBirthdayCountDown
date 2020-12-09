@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/member-birthday-countdown/static/css/main.23080382.chunk.css",
+    "main.js": "/member-birthday-countdown/static/js/main.b4a71bd0.chunk.js",
+    "main.js.map": "/member-birthday-countdown/static/js/main.b4a71bd0.chunk.js.map",
+    "runtime-main.js": "/member-birthday-countdown/static/js/runtime-main.aa92d5ea.js",
+    "runtime-main.js.map": "/member-birthday-countdown/static/js/runtime-main.aa92d5ea.js.map",
+    "static/css/2.b00201c5.chunk.css": "/member-birthday-countdown/static/css/2.b00201c5.chunk.css",
+    "static/js/2.b7c03cb7.chunk.js": "/member-birthday-countdown/static/js/2.b7c03cb7.chunk.js",
+    "static/js/2.b7c03cb7.chunk.js.map": "/member-birthday-countdown/static/js/2.b7c03cb7.chunk.js.map",
+    "static/js/3.e056d2c4.chunk.js": "/member-birthday-countdown/static/js/3.e056d2c4.chunk.js",
+    "static/js/3.e056d2c4.chunk.js.map": "/member-birthday-countdown/static/js/3.e056d2c4.chunk.js.map",
+    "index.html": "/member-birthday-countdown/index.html",
+    "static/css/2.b00201c5.chunk.css.map": "/member-birthday-countdown/static/css/2.b00201c5.chunk.css.map",
+    "static/css/main.23080382.chunk.css.map": "/member-birthday-countdown/static/css/main.23080382.chunk.css.map",
+    "static/js/2.b7c03cb7.chunk.js.LICENSE.txt": "/member-birthday-countdown/static/js/2.b7c03cb7.chunk.js.LICENSE.txt",
+    "static/media/logo.2d27ead7.svg": "/member-birthday-countdown/static/media/logo.2d27ead7.svg",
+    "static/media/logo.4eba379c.png": "/member-birthday-countdown/static/media/logo.4eba379c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa92d5ea.js",
+    "static/css/2.b00201c5.chunk.css",
+    "static/js/2.b7c03cb7.chunk.js",
+    "static/css/main.23080382.chunk.css",
+    "static/js/main.b4a71bd0.chunk.js"
+  ]
+}
