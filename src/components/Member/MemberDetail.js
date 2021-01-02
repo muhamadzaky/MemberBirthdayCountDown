@@ -2,7 +2,9 @@ import { Button, Col, Row, Typography } from 'antd';
 import React, { Component } from 'react';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import Animate from 'rc-animate';
+import TimeCounter from '../TimeCounter';
 import history from '../../common/history';
+import moment from 'moment';
 
 export default class MemberDetail extends Component {
   state = {
@@ -20,6 +22,9 @@ export default class MemberDetail extends Component {
     const { memberData } = this.state;
     const { Title, Text } = Typography;
     const data = memberData;
+    const birthdateString = data.birthday.date.slice(0, -4) + moment().format('YYYY')
+    const birthdate = moment(birthdateString).format('MM DD YYYY, hh:mm');
+    console.log(birthdate)
     return (
       <Animate transitionName="fade" transitionAppear>
         <Row key={1} className="container">
@@ -50,9 +55,9 @@ export default class MemberDetail extends Component {
                 <Row style={{ marginTop: 20 }}>
                   { data.more.site ? <a href={data.more.site} target="_blank">More Info</a> : null }
                 </Row>
-                <Row style={{ marginTop: 30 }}>
+                <Row style={{ marginTop: 30 }} justify="space-around">
                   <Col>
-                    countdown here.
+                    <TimeCounter timeTillDate={`${birthdate}`} timeFormat="MM DD YYYY, hh:mm" />
                   </Col>
                 </Row>
               </Col>
