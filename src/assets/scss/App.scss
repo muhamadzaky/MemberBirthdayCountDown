@@ -44,6 +44,9 @@ $nogiPurpleHover: #9f16a8;
   }
 }
 
+.container {
+  padding: 3% 6%;
+}
 
 // --------------------------------------------- //
 .ant-layout {
@@ -110,4 +113,42 @@ $nogiPurpleHover: #9f16a8;
 
 .modal-value {
   font-size: 16px;
+}
+
+.ant-input-affix-wrapper.custom-input {
+  border-radius: 50px;
+  padding: 10px 20px;
+  .ant-input {
+    font-size: 16px;
+  }
+}
+
+.ant-divider.ant-divider-horizontal.custom-divider {
+  margin: 10px;
+}
+
+// ------- //
+
+.group-logo {
+  width: 6rem;
+}
+
+.group-detail-logo-bg {
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.group-detail-logo {
+  width: 100px;
+}
+
+.member-detail-pict-bg {
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.member-detail-pict {
+  width: 100%;
 }

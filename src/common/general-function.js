@@ -3,7 +3,7 @@ export const uriByENV = (env) => {
     case 0:
       return '/'
     case 1:
-      return '/member-birthday-countdown/'
+      return '/MemberBirthdayCountDown/'
     default:
       return '/'
   }

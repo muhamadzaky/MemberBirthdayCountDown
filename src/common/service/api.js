@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-  baseURL: "https://private-c56272-membercountdown.apiary-mock.com/info/",
+  baseURL: "https://private-c56272-membercountdown.apiary-mock.com/",
   headers: {
     'Access-Control-Allow-Origin': "http://localhost:3000/",
     'Access-Control-Allow-Headers': "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",

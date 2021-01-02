@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "http://muhamadzaky.github.io/member-birthday-countdown",
+  "homepage": "http://muhamadzaky.github.io/MemberBirthdayCountDown/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,9 +11,10 @@
     "axios": "^0.21.0",
     "enquire-js": "^0.2.1",
     "gh-pages": "^3.1.0",
-    "history": "^5.0.0",
+    "history": "^4.10.1",
     "moment": "^2.29.1",
     "node-sass": "4.14.1",
+    "query-string": "^6.13.8",
     "rc-animate": "^3.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
