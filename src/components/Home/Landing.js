@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Card, Col, Divider, List, Row, Typography } from 'antd';
 import { uriByENV } from '../../common/general-function';
 import { stringify } from 'query-string';
+import { withRouter } from 'react-router-dom';
 import Animate from 'rc-animate';
 import logoReact from '../../assets/image/logo.svg';
 import history from '../../common/history';
 
 class Landing extends Component {
   render() {
-    const { isLoading, dataLoaded, groupData, env, isMobile } = this.props;
+    const { dataLoaded, groupData, env, isMobile } = this.props;
     const { Title, Text } = Typography;
     if (!dataLoaded) {
       return (
@@ -52,13 +53,13 @@ class Landing extends Component {
                                     <Card 
                                       title={dt.category} 
                                       onClick={ () => { 
-                                            history.push(`${uriByENV(env)}group-detail/?${stringify({ id: dt.id, name: dt.name })}`) 
+                                            history.push(`${uriByENV(env)}group/?${stringify({ id: dt.id, name: dt.name })}`) 
                                           } 
                                         }
                                       style={{ cursor: 'pointer' }}  
                                     >
                                       <Row>
-                                        <img src={dt.logo} className="group-logo" />
+                                        <img src={dt.logo} className="group-logo" alt={dt.name} />
                                       </Row>
                                       <Row justify="space-around">
                                         <Divider className="custom-divider" />
@@ -83,4 +84,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+export default withRouter(Landing);

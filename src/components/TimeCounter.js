@@ -42,8 +42,6 @@ export default class Countdown extends Component {
 		const minutesRadius = mapNumber(minutes, 60, 0, 0, 360);
     const secondsRadius = mapNumber(seconds, 60, 0, 0, 360);
     
-    console.log(months, days, hours, minutes, seconds);
-
 		if(!seconds) {
 			return null;
 		}

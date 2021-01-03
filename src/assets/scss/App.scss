@@ -48,6 +48,13 @@ $nogiPurpleHover: #9f16a8;
   padding: 3% 6%;
 }
 
+p.title-header {
+  font-family: 'Overpass', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 // --------------------------------------------- //
 .ant-layout {
   font-family: 'Overpass', sans-serif;
@@ -147,6 +154,13 @@ $nogiPurpleHover: #9f16a8;
   background-color: white;
   padding: 12px;
   border-radius: 10px;
+}
+
+.member-detail-pict-bg-mobile {
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+  width: 800px;
 }
 
 .member-detail-pict {

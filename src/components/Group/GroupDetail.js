@@ -4,10 +4,11 @@ import { api } from '../../common/service/api';
 import { Avatar, Button, Card, Col, Input, List, Row, Typography } from 'antd';
 import { ArrowLeftOutlined, SearchOutlined } from '@ant-design/icons';
 import { uriByENV } from '../../common/general-function';
+import { withRouter } from 'react-router-dom';
 import Animate from 'rc-animate';
 import history from '../../common/history';
 
-export default class GroupDetail extends Component {
+class GroupDetail extends Component {
   state = {
     groupID: 0,
     groupName: "",
@@ -27,11 +28,15 @@ export default class GroupDetail extends Component {
     })
   }
 
+  onClickUrl = (data) => {
+    const { setMemberData } = this.props;
+    setMemberData(data, `${this.props.location.pathname}${this.props.location.search}`);
+  }
+
   render() {
     const { dataGroup, dataListMember } = this.state;
-    const { isMobile, env } = this.props;
+    const { isMobile } = this.props;
     const { Title, Text } = Typography;
-    console.log(this.state);
     return (
       <Animate transitionName="fade" transitionAppear>
         <Row key={1} className="container">
@@ -43,11 +48,11 @@ export default class GroupDetail extends Component {
               <Col>
                 <Row>
                   <Col className="group-detail-logo-bg">
-                    <img src={ (dataGroup.detail || {}).logo } className="group-detail-logo" />
+                    <img src={ (dataGroup.detail || {}).logo } className="group-detail-logo" alt={dataGroup.name} />
                   </Col>
                   <Col style={{ marginLeft: 20 }}>
                     <Row>
-                      <a href={(dataGroup.detail || {}).site} target="_blank">
+                      <a href={(dataGroup.detail || {}).site} target="_blank" rel="noreferrer">
                         <Title>{dataGroup.name}</Title>
                       </a>
                     </Row>
@@ -70,17 +75,7 @@ export default class GroupDetail extends Component {
                   <List.Item>
                     <Card 
                       style={{ cursor: 'pointer' }}
-                      onClick={ 
-                        () => { 
-                          history.push({
-                            pathname: `${uriByENV(env)}member-detail/?${stringify({ name: (item.name || {}).romaji, group: (item.career_info || {}).group, team: (item.career_info || {}).team })}`,
-                            state: {
-                              data: item,
-                              prevUrl: `${this.props.location.pathname}${this.props.location.search}`
-                            }
-                          });
-                        } 
-                      }
+                      onClick={() => this.onClickUrl(item)}
                     >
                       <Card.Meta
                         avatar={
@@ -100,3 +95,5 @@ export default class GroupDetail extends Component {
     )
   }
 }
+
+export default withRouter(GroupDetail)
