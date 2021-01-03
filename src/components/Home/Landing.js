@@ -58,7 +58,7 @@ class Landing extends Component {
                                         }
                                       style={{ cursor: 'pointer' }}  
                                     >
-                                      <Row>
+                                      <Row justify="space-around">
                                         <img src={dt.logo} className="group-logo" alt={dt.name} />
                                       </Row>
                                       <Row justify="space-around">

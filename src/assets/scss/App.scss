@@ -134,6 +134,11 @@ p.title-header {
   margin: 10px;
 }
 
+span.ant-typography.sub-title {
+  font-size: 14px;
+  color: #616161;
+}
+
 // ------- //
 
 .group-logo {
@@ -160,11 +165,17 @@ p.title-header {
   background-color: white;
   padding: 12px;
   border-radius: 10px;
-  width: 800px;
 }
 
 .member-detail-pict {
   width: 100%;
+}
+
+span.graduated {
+  border: 1px solid red;
+  color: red;
+  padding: 5px 10px;
+  margin-bottom: 5px;
 }
 
 // time counter - start

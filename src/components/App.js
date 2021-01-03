@@ -4,7 +4,8 @@ import { HeartFilled } from '@ant-design/icons'
 import { enquireScreen } from 'enquire-js'
 import { Redirect, Route, Router, Switch, withRouter } from 'react-router-dom'
 import { api } from '../common/service/api'
-import { uriByENV } from '../common/general-function'
+import { reloadAPIError, uriByENV } from '../common/general-function'
+import { stringify } from 'query-string'
 import moment from 'moment'
 import history from '../common/history'
 import Landing from './Home/Landing'
@@ -13,7 +14,6 @@ import MemberDetail from './Member/MemberDetail'
 import logo from '../assets/image/logo.png'
 import '../assets/scss/App.scss'
 import 'antd/dist/antd.css'
-import { stringify } from 'query-string'
 
 let isMobile
 
@@ -41,7 +41,7 @@ class App extends Component {
     })
     .catch(() => {
       this.setState({ isLoading: false, dataLoaded: false });
-      message.error('Failed to get data', 2.5).then(() => message.loading('Page will be reloaded in 5 secs', 5)).then(() => { message.destroy(); window.location.reload() });
+      reloadAPIError();
     })
   }
   
@@ -85,7 +85,7 @@ class App extends Component {
                 {/* - Powered by <Link href="http://stage48.net/wiki/index.php/Main_Page" target="_blank" strong>Stage48</Link> */}
               </Col>
               <Col>
-                This is just a prototype, <span style={{ fontWeight: 'bold', border: '1px solid red' }}>source data from <Link href="http://stage48.net/wiki/index.php/Main_Page" target="_blank" strong>Stage48</Link></span>
+                This is just a prototype, { isMobile ? <br /> : null }<span style={{ fontWeight: 'bold', border: '1px solid red', padding: '5px 10px' }}>source data from <Link href="http://stage48.net/wiki/index.php/Main_Page" target="_blank" strong>Stage48</Link></span>
               </Col>
             </Row>
           </Footer>
