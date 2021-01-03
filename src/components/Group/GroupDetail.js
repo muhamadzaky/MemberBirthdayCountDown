@@ -61,7 +61,6 @@ class GroupDetail extends Component {
     const { dataGroup } = this.state;
     const team = (item.career_info || {}).team;
     const graduated = (item.career_info || {}).graduated.status;
-    console.log(item);
     return (item.career_info || {}).group.map((item, i) => {
       return (
         <Row key={i}>
