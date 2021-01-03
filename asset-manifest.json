@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MemberBirthdayCountDown/static/css/main.e2239914.chunk.css",
-    "main.js": "/MemberBirthdayCountDown/static/js/main.a685848d.chunk.js",
-    "main.js.map": "/MemberBirthdayCountDown/static/js/main.a685848d.chunk.js.map",
+    "main.js": "/MemberBirthdayCountDown/static/js/main.1d6a6164.chunk.js",
+    "main.js.map": "/MemberBirthdayCountDown/static/js/main.1d6a6164.chunk.js.map",
     "runtime-main.js": "/MemberBirthdayCountDown/static/js/runtime-main.e5ec7a3e.js",
     "runtime-main.js.map": "/MemberBirthdayCountDown/static/js/runtime-main.e5ec7a3e.js.map",
     "static/css/2.b00201c5.chunk.css": "/MemberBirthdayCountDown/static/css/2.b00201c5.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.b00201c5.chunk.css",
     "static/js/2.07c2112b.chunk.js",
     "static/css/main.e2239914.chunk.css",
-    "static/js/main.a685848d.chunk.js"
+    "static/js/main.1d6a6164.chunk.js"
   ]
 }
