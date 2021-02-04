@@ -21,7 +21,7 @@ class GroupDetail extends Component {
   componentWillMount() {
     const parsedQuery = parse(this.props.location.search)
     this.setState({ groupID: parsedQuery.id, groupName: parsedQuery.name });
-    api.get(`/list/group/${parsedQuery.name}`)
+    api.get(`/list/group/${parsedQuery.name === "IZ*ONE" ? "IZONE" : parsedQuery.name}`)
     .then(res => {
       this.setState({ dataGroup: res.data, dataListMember: res.data.member, isLoading: false });
     })

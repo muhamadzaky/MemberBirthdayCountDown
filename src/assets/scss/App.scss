@@ -130,6 +130,26 @@ p.title-header {
   }
 }
 
+.ant-select.custom-select.ant-select-single.ant-select-show-arrow.ant-select-show-search {
+  .ant-select-selector {
+    padding: 10px 20px;
+    height: 47px;
+    border-radius: 50px;
+    .ant-select-selection-search {
+      padding: 10px;
+      input {
+        font-size: 16px;
+      }
+    }
+    .ant-select-selection-item {
+      font-size: 16px;
+    }
+    .ant-select-selection-placeholder {
+      font-size: 16px;
+    }
+  }
+}
+
 .ant-divider.ant-divider-horizontal.custom-divider {
   margin: 10px;
 }
